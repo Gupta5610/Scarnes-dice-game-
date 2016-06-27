@@ -11,14 +11,21 @@
     android:id="@+id/d">
 
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/Dice"
+        android:background="@drawable/one"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
+        android:layout_toLeftOf="@+id/hold"
+        android:layout_toStartOf="@+id/hold" />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/Dice2"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/hold"
+        android:layout_toEndOf="@+id/hold"
         android:background="@drawable/one" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,22 +60,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Score"
-        android:id="@+id/textView"
-        android:textSize="20sp"
-        android:layout_below="@+id/hold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Player"
         android:id="@+id/textView2"
-        android:layout_below="@+id/textView"
+        android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/roll"
-        android:layout_toEndOf="@+id/roll" />
+        android:layout_toEndOf="@+id/roll"
+        android:layout_marginTop="200dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -76,9 +74,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Computer"
         android:id="@+id/textView3"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/Dice"
-        android:layout_alignEnd="@+id/Dice" />
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/reset"
+        android:layout_alignStart="@+id/reset" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -88,7 +86,8 @@
         android:id="@+id/textView4"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="60dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -99,7 +98,7 @@
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="28dp" />
+        android:layout_marginTop="86dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -121,8 +120,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/UserOverall"
-        android:layout_alignParentBottom="true"
+        android:layout_alignBottom="@+id/textView4"
         android:layout_alignLeft="@+id/UserRoundScore"
         android:layout_alignStart="@+id/UserRoundScore" />
 
@@ -130,7 +130,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/ComputerOverall"
-        android:layout_alignParentBottom="true"
+        android:layout_alignBottom="@+id/UserOverall"
         android:layout_alignLeft="@+id/ComputerRoundScore"
         android:layout_alignStart="@+id/ComputerRoundScore" />
 
