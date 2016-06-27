@@ -2,7 +2,6 @@ package ashishgupta.com.scarnes_dice;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -52,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
             case 1: dice.setImageResource(R.drawable.one);
                     userTurnScore=0;
                     userRound.setText("0");
+                    Toast.makeText(this,"Lolz....hit a 0",Toast.LENGTH_SHORT).show();
+                    computerTurn();
                     break;
 
             case 2: dice.setImageResource(R.drawable.two);
@@ -108,14 +109,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void computerTurn()
     {
-        Log.e("Computer","Computer function was executed");
+        Toast.makeText(this,"Computers turn",Toast.LENGTH_SHORT).show();
         computerTurnScore=0;
         int i;
         computerRound.setText("0");
         while(computerTurnScore<20)
         {
+
             i=new Random().nextInt(6)+1;
-            Log.e("ComScore",String.valueOf(i));
             if(i==1)
             {
              computerTurnScore=0;
